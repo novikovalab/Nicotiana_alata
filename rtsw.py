@@ -41,4 +41,4 @@ mv.set_custom_color_scheme(color_scheme)
 fig = mv.plotfig()
 
 # Save the figure as a PDF
-fig.savefig("rtsw_visualization_with_colors.pdf", format="pdf")
+fig.savefig("rtsw_helix.pdf", format="pdf")
