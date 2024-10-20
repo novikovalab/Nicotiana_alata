@@ -5,7 +5,7 @@ import random
 import matplotlib.pyplot as plt
 
 # Load your MSA file using Biopython
-msa_file = "D:/rtsw/RTSW_like.fas"
+msa_file = "./RTSW_like.fas"
 alignment = AlignIO.read(msa_file, "fasta")
 
 # Define the start and end positions for the region of interest (1-based index in fasta)
@@ -32,7 +32,7 @@ colors = list(color_palette) * (len(base_counts) // len(color_palette) + 1)  # R
 color_scheme = {base: color for base, color in zip(base_counts.keys(), colors)}
 
 # Create MSA visualization using pymsaviz
-mv = MsaViz(msa_file, start=902, end=936)  # 1-based index for pymsaviz
+mv = MsaViz(msa_file, start=902, end=936, show_consensus=True)  # 1-based index for pymsaviz
 
 # Set the custom color scheme for the bases (no color for '-')
 mv.set_custom_color_scheme(color_scheme)
